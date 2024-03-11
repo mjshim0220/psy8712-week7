@@ -39,9 +39,23 @@ week7_tbl %>%
     labs(color="Participant Gender", x="Score on Q1", y="Score on Q2")) %>%
   ggsave(filename="../figs/fig3.png", width=8, height=4)
 
+
 (ggplot(week7_tbl, aes(x=gender, y=timeSpent))+
     geom_boxplot()+
     labs(x="Gender", y="Time Elapsed (mins)")) %>% 
   ggsave(filename="../figs/fig4.png", width=8, height=4)
+
+
+(ggplot(week7_tbl, aes(x=q5, y=q7, color=condition))+
+  geom_jitter()+
+  geom_smooth(method="lm", se=F)+
+  labs(x="Score on Q5", y="Score on Q7", color="Experimental Condition")+
+  theme(legend.position = "bottom", 
+        legend.background = element_rect(fill="lightgray"))) %>% 
+  ggsave(filename="../figs/fig5.png", width=8, height=4)
+
+    
+    
+          
 
   
