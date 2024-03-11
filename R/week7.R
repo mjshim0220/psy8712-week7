@@ -54,8 +54,4 @@ week7_tbl %>%
         legend.background = element_rect(fill="lightgray"))) %>% 
   ggsave(filename="../figs/fig5.png", width=8, height=4)
 
-    
-    
-          
-
   
